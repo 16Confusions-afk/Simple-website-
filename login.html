@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Futuristic Website</title>
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: radial-gradient(circle at center, #1a1a2e, #16213e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .login-container {
+            position: relative;
+            background: rgba(26, 26, 46, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+            width: 400px;
+            text-align: center;
+            border: 2px solid #6200ff;
+            animation: neonPulse 3s infinite alternate;
+        }
+        @keyframes neonPulse {
+            0% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); }
+            100% { box-shadow: 0 0 40px lab(91.12% -48.08 -14.14 / 0.6); }
+        }
+        h2 {
+            color: #00ffcc;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+        .input-group {
+            margin-bottom: 25px;
+            text-align: left;
+            position: relative;
+        }
+        .input-group label {
+            display: block;
+            color: #a8e6cf;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px #a8e6cf;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(168, 230, 207, 0.1);
+            color: #d4a5a5;
+            font-size: 1em;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        .input-group input:focus {
+            background: rgba(168, 230, 207, 0.2);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+        .forgot-password {
+            display: block;
+            text-align: right;
+            color: #ff006e;
+            text-decoration: none;
+            margin-top: 5px;
+            font-size: 0.9em;
+            transition: color 0.3s ease;
+        }
+        .forgot-password:hover {
+            color: #ff79c6;
+            text-shadow: 0 0 5px #ff79c6;
+        }
+        .login-button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #00ffcc, #ff006e);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .login-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+        .otp-message {
+            margin: 20px 0;
+            color: #a8e6cf;
+            font-size: 1em;
+            text-shadow: 0 0 5px #a8e6cf;
+        }
+        .sign-up {
+            display: block;
+            margin-top: 20px;
+            color: #ff79c6;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+        .sign-up:hover {
+            color: #ff006e;
+            text-shadow: 0 0 5px #ff006e;
+        }
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .social-icon {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #00ffcc, #ff006e);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 0, 34, 0.5);
+        }
+        /* Particle Animation */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #00ffcc;
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(100vw); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Welcome to the Future</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            <button type="submit" class="login-button">Enter the Matrix</button>
+            <div class="otp-message">We will send a digital key to your device</div>
+            <a href="#" class="sign-up">New to the future? Join us</a>
+            <div class="social-login">
+                <a href="#" class="social-icon" style="background: linear-gradient(45deg, #db4a39, #ff006e);">G</a>
+                <a href="#" class="social-icon" style="background: linear-gradient(45deg, #3b5998, #00ffcc);">F</a>
+                <a href="#" class="social-icon" style="background: linear-gradient(45deg, #000, #a8e6cf);">A</a>
+                <a href="#" class="social-icon" style="background: linear-gradient(45deg, #e4405f, #ff79c6);">I</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- You should place your image inside the .login-container div, ideally above or below the <h2> element for best visual impact. For example: -->
+<!-- <img src="your-image-path.jpg" alt="Futuristic Logo" style="width:100px; margin-bottom:20px;"> -->
